@@ -14,7 +14,7 @@ fetch("https://api-colombia.com/api/v1/President")
         // aquí ordenamos por año (periodo inicial)
         data.sort((a, b) => a.startPeriodDate.localeCompare(b.startPeriodDate));
 
-        data.slice(0, 15).forEach(pres => {
+        data.slice(0, 15).forEach(pres  => {
 
             const card = document.createElement("div");
             card.className = "card";
