@@ -136,3 +136,14 @@ a {
     50% { opacity: 1; }
     100% { opacity: 0.5; }
 }
+/* tarjeta tipo dashboard */
+.card h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card img {
+    max-width: 150px;
+    margin: 10px auto;
+    display: block;
+}
