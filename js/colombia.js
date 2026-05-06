@@ -12,19 +12,27 @@ fetch("https://api-colombia.com/api/v1/Country/Colombia")
 
         document.getElementById("cargando").style.display = "none";
 
-        // Creamos UNA sola tarjeta tipo dashboard
-        const card = document.createElement("div");
+         const card = document.createElement("div");
 
-        // agregamos animación tipo Apple
-        card.className = "card reveal";
+         card.className = "card reveal";
 
         // ===============================
-        // innerHTML
-        // Sirve para insertar contenido dinámico
+        // ARREGLAR IMAGEN (CLAVE)
+        // ===============================
+        const bandera = "https://flagcdn.com/w320/co.png";
+
+        // ===============================
+        // CONTENIDO
         // ===============================
         card.innerHTML = `
             <h2>${data.name}</h2>
-            <img src="${data.flags?.png}" alt="Bandera">
+
+            <img 
+                src="${bandera}" 
+                alt="Bandera de Colombia"
+                width="150"
+                onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg'"
+            >
 
             <p><strong>Capital:</strong> ${data.capital}</p>
             <p><strong>Población:</strong> ${data.population}</p>
@@ -39,5 +47,5 @@ fetch("https://api-colombia.com/api/v1/Country/Colombia")
 
     .catch(error => {
         document.getElementById("cargando").innerText = "Error al cargar datos";
-        console.log(error);
+        console.error(error);
     });

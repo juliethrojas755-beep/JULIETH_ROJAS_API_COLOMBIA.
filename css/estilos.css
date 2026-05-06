@@ -143,7 +143,9 @@ a {
 }
 
 .card img {
-    max-width: 150px;
+    width: 180px;
+    border-radius: 10px;
     margin: 10px auto;
     display: block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
